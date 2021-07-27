@@ -1,0 +1,110 @@
+.btn {
+	&,
+	&:link,
+	&:visited {
+		text-transform: uppercase;
+		text-decoration: none;
+		display: inline-block;
+		transition: $default-transition;
+		position: relative;
+		font-size: $default-font-size;
+		border: none;
+		cursor: pointer;
+		font-weight: $light-weight;
+		background-color: $color-white-gradient;
+		color: $color-secondary-dark;
+		padding: 1.5rem 4rem;
+		margin-left: 0;
+    font-family: 'Roboto';
+	}
+
+	&:hover,
+	&:active,
+	&:focus {
+		transform: translateY(-0.3rem);
+		box-shadow: 0 1rem 2.5rem rgba($color-black, 0.2);
+		outline: none;
+		box-shadow: none;
+		background-color: $color-primary;
+		color: $color-white;
+		transform: translateY(0) scale(1.05);
+
+		&::after {
+			opacity: 0;
+		}
+	}
+
+	&::after {
+		content: '';
+		display: inline-block;
+		height: 100%;
+		width: 100%;
+		position: absolute;
+		top: 0;
+		left: 0;
+		z-index: -1;
+		transition: all 0.4s;
+		background-color: $color-white-gradient;
+	}
+
+  &--lg {
+    padding: 3rem 8rem;
+    font-size: 2rem;
+  }
+
+	&--basic {
+		&,
+		&:link,
+		&:visited {
+			color: $color-secondary-dark-2;
+			font-weight: $medium-weight;
+			border-bottom: 1px solid $color-secondary-dark-2;
+			padding: 0;
+		}
+
+		&:hover {
+			transform: scale(1.1);
+			color: $color-secondary-dark-2;
+			background-color: unset;
+		}
+	}
+
+	&--dark {
+		background-color: $color-secondary-dark-2;
+		color: $color-white;
+		padding: 1.5rem 4rem;
+		transition: all 0.4s;
+
+		&::after {
+			background-color: $color-secondary-dark-2;
+			color: $color-white;
+		}
+
+		&:hover,
+		&:active,
+		&:focus {
+			outline: none;
+			box-shadow: none;
+			background-color: $color-white-gradient;
+			color: $color-secondary-dark;
+			transform: translateY(0) scale(1.05);
+		}
+	}
+
+	&--reverse {
+		background-color: $color-primary;
+		color: $color-white;
+		&:hover,
+		&:active,
+		&:focus {
+			background-color: $color-white-gradient;
+			color: $color-secondary-dark;
+			box-shadow: 0 0.5rem 0.5rem rgba(0, 0, 0, 0.1);
+		}
+	}
+
+	&--animated {
+		animation: 0.5s ease-out 0.75s moveInBottom;
+		animation-fill-mode: backwards;
+	}
+}

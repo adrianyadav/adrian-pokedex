@@ -1,0 +1,72 @@
+// COLORS
+$color-primary: #033f63;
+$color-primary-light: #a2d5f2;
+$color-primary-dark: #3f76a3;
+$color-primary-dark-2: #033f63;
+
+$color-secondary-dark: #1b242f;
+$color-secondary-dark-2: #1e242c;
+
+$background-primary-gradient: rgba($color-primary-dark-2, 0.7);
+$background-primary-gradient-dark: rgba($color-secondary-dark, 0.7);
+$background-primary-gradient-light: rgba($color-primary-dark-2, 0.4);
+
+$color-tertiary: #ff7e67;
+
+$color-grey-light-1: #f7f7f7f7;
+$color-grey-light-2: #eeeeee;
+
+$color-gray-dark: #777777;
+$color-gray-dark-2: #999;
+$color-gray-dark-3: #333;
+
+$color-white: #ffffff;
+$color-black: #000;
+
+//  NOTICE
+$gray: #4c4c4c;
+$success-color: mix($gray, #2ecc71, 15%);
+$warning-color: mix($gray, #f3bc15, 15%);
+$danger-color: mix($gray, #dc081d, 15%);
+$info-color: mix($gray, #427ab8, 15%);
+
+// SEARCH
+
+$color-white-gradient: rgba($color-white, 1);
+
+// NIB TRAVEL
+$color-nib-primary-light: #aecd8b;
+$color-nib-primary: #16954a;
+
+// UPAGED2
+$color-upaged-primary: #193363;
+
+// TRANSITIONS
+$default-transition: all 0.3s;
+$easeInSine: all 0.3s cubic-bezier(0.47, 0, 0.745, 0.715);
+$easeOutQuad: all 1s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+
+// GRID
+$grid-width: 114rem;
+$gutter-vertical: 8rem;
+$gutter-vertical-small: 6rem;
+$gutter-horizontal: 6rem;
+
+// FONT
+$default-font-family: 'Roboto', sans-serif;
+$default-font-size: 1.8rem;
+$default-font-color: #3b3d41;
+$light-weight: 100;
+$medium-weight: 300;
+$heavy-weight: 700;
+
+// MEDIA QUERIES
+$phone: 37.5em; //600 px
+$tab-port: 56.25em; //900px;
+$tab-land: 75em; //1200px;
+$big-desktop: 112.5em; //1800px;
+
+// MARGINS
+$default-margin-top: 3rem;
+$default-margin-bottom: 1.5rem;
+$margin-bottom-lg: 5rem;

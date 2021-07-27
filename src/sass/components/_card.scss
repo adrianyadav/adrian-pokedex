@@ -1,0 +1,75 @@
+.card {
+	max-width: 960px;
+	margin: 0 auto;
+	box-shadow: 0 3rem 6rem rgba($color-black, 0.1);
+	background-color: rgba($color-white, 0.6);
+	border-radius: 0.3rem;
+	padding: 7rem;
+	font-size: $default-font-size;
+	transform: skewX(-12deg);
+	position: relative;
+
+	display: flex;
+  align-items: center;
+	justify-content: center;
+
+	@include respond(tab-port) {
+		width: 100%;
+		padding: 4rem;
+		transform: skewX(0);
+	}
+
+	@include respond(phone) {
+		width: 100%;
+		padding: 4rem;
+	}
+
+	&__container {
+		margin: 0 auto;
+		display: block;
+	}
+
+	&__shape {
+		display: flex;
+		flex-flow: wrap;
+    align-items: center;
+		width: 20rem;
+		height: auto;
+		transform: translateY(-2rem) skewX(12deg);
+		position: relative;
+		z-index: 1;
+
+		@include respond(tab-port) {
+			left: 50%;
+			transform: translate(-50%, -10%) skewX(0);
+		}
+	}
+
+	&__img {
+		height: 100%;
+		width: 100%;
+		backface-visibility: hidden;
+		transition: all 0.5s;
+	}
+
+	&__text {
+		transform: skewX(12deg);
+		z-index: -1;
+		@include respond(tab-port) {
+			transform: skewX(0);
+			clear: both;
+		}
+	}
+}
+
+.card:hover .profile__caption {
+	opacity: 1;
+	-webkit-transform: translate(-50%, -50%);
+	transform: translate(-50%, -50%);
+}
+
+.card:hover .profile__img {
+	-webkit-transform: translateX(-4rem) scale(1);
+	transform: scale(1);
+	filter: brightness(60%);
+}

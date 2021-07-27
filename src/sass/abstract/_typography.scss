@@ -1,0 +1,125 @@
+/* roboto-100 - latin */
+@font-face {
+	font-family: 'Roboto';
+	font-style: normal;
+	font-weight: 100;
+	src: local('Roboto Thin'), local('Roboto-Thin'),
+		url('../../fonts/roboto-v20-latin-100.woff2') format('woff2'),
+		/* Chrome 26+, Opera 23+, Firefox 39+ */
+			url('../../fonts/roboto-v20-latin-100.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+/* roboto-300 - latin */
+@font-face {
+	font-family: 'Roboto';
+	font-style: normal;
+	font-weight: 300;
+	src: local('Roboto Light'), local('Roboto-Light'),
+		url('../../fonts/roboto-v20-latin-300.woff2') format('woff2'),
+		/* Chrome 26+, Opera 23+, Firefox 39+ */
+			url('../../fonts/roboto-v20-latin-300.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+/* roboto-700 - latin */
+@font-face {
+	font-family: 'Roboto';
+	font-style: normal;
+	font-weight: 700;
+	src: local('Roboto Bold'), local('Roboto-Bold'),
+		url('../../fonts/roboto-v20-latin-700.woff2') format('woff2'),
+		/* Chrome 26+, Opera 23+, Firefox 39+ */
+			url('../../fonts/roboto-v20-latin-700.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+
+
+body {
+	font-family: 'Roboto', sans-serif;
+	font-weight: $medium-weight;
+	line-height: 1.6;
+	color: $default-font-color;
+}
+
+.heading-primary {
+	font-size: 6rem;
+	color: $color-white;
+	font-weight: $light-weight;
+	letter-spacing: 0.75rem;
+
+	@include respond(phone) {
+		font-size: 4rem;
+		line-height: 6rem;
+	}
+}
+.heading-secondary {
+	font-size: 3.5rem;
+	text-transform: uppercase;
+	font-weight: $light-weight;
+	display: block;
+	max-width: 20rem;
+	margin-bottom: $default-margin-bottom;
+	&::after {
+		content: '';
+		display: block;
+		border-bottom: 3px solid $default-font-color;
+		transform: scaleX(0.8);
+	}
+	&--light {
+		color: $color-white;
+		&::after {
+			content: '';
+			display: block;
+			border-bottom: 3px solid $color-white;
+			transform: scaleX(0.8);
+		}
+	}
+}
+
+.heading-tertiary {
+	font-size: 2.5rem;
+	font-weight: $light-weight;
+	@include respond(phone) {
+		font-size: 2rem;
+	}
+}
+
+.heading-text {
+	font-size: 2.8rem;
+	font-weight: $light-weight;
+	display: block;
+	margin-bottom: $margin-bottom-lg;
+	color: $color-white;
+}
+
+h2 {
+	font-size: 3rem;
+	font-weight: $medium-weight;
+	display: block;
+	margin-top: $default-margin-top;
+	margin-bottom: $default-margin-bottom;
+	line-height: 140%;
+
+	@include respond(tab-port) {
+		font-size: 2.5rem;
+	}
+}
+
+.paragraph,
+p {
+	font-size: $default-font-size;
+	&:not(last-child) {
+		margin-bottom: $default-margin-bottom;
+	}
+}
+
+a {
+	&:link,
+	&:visited {
+		color: $color-primary;
+	}
+	&:hover,
+	&:active {
+		color: $color-secondary-dark-2;
+	}
+}
+
+.highlight {
+	color: $color-primary;
+}
