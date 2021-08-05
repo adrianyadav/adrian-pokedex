@@ -1,5 +1,21 @@
+.cards {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(400px, 1fr) );
+	max-width: 50vw;
+  margin: 0 auto;
+	column-gap: 2rem;
+	justify-content: center;
+
+	@include respond(phone) {
+		grid-template-columns: repeat(1, 1fr);
+		column-gap: 0;
+	}
+}
+
 .card {
 	max-width: 960px;
+
+	display: grid;
 	margin: 0 auto;
 	box-shadow: 0 3rem 6rem rgba($color-black, 0.1);
 	background-color: rgba($color-white, 0.6);
@@ -8,15 +24,20 @@
 	font-size: $default-font-size;
 	transform: skewX(-12deg);
 	position: relative;
+	grid-template-columns: repeat(2,1fr);
+	align-items: center;
 
-	display: flex;
-  align-items: center;
-	justify-content: center;
+
+	&--single {
+		grid-template-columns: repeat(1,1fr);
+	}
 
 	@include respond(tab-port) {
 		width: 100%;
 		padding: 4rem;
 		transform: skewX(0);
+		grid-template-columns: repeat(1,1fr);
+
 	}
 
 	@include respond(phone) {
@@ -26,18 +47,24 @@
 
 	&__container {
 		margin: 0 auto;
-		display: block;
+		display: grid;
+		justify-items: center;
+		grid-template-columns: repeat(1,1fr);
+		transform: skewX(12deg);
+
+		@include respond(phone) {
+			justify-items: unset;
+			transform: skewX(0deg);
+		}
 	}
 
 	&__shape {
-		display: flex;
-		flex-flow: wrap;
-    align-items: center;
+		display: grid;
 		width: 20rem;
 		height: auto;
-		transform: translateY(-2rem) skewX(12deg);
 		position: relative;
 		z-index: 1;
+		margin-bottom: 3rem;
 
 		@include respond(tab-port) {
 			left: 50%;
