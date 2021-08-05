@@ -129,7 +129,7 @@ function App() {
       <section className="section section-favourite">
         <div className="u-center-text">
           <h2 className="heading-secondary u-center-margin u-margin-bottom-medium">Favorites</h2>
-          <div class="cards">
+          <div className="cards">
             {
               favoritePokemons &&
               favoritePokemons.map((pokemon) => (
